@@ -5,11 +5,10 @@ from pyrogram.errors import FloodWait
 
 bot = Client(
     "Remove FwdTag",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"]
+    bot_token = os.environ.get("BOT_TOKEN", "6430269059:AAHLA57bxngSLD7jL7_6gZjZFAIJk74pgVg"),
+    api_id = os.environ.get("API_ID", "20561711"),
+    api_hash = os.environ.get("API_HASH", "be67fa66bf79d732d799ed8fc7d54a16")
 )
-
 
 START_TXT = """
 Hi {}, I'm Forward Tag Remover bot.\n\nForward me some messages, i will remove forward tag from them.\nAlso can do it in channels.
